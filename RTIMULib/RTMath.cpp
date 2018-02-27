@@ -56,6 +56,12 @@ const char *RTMath::displayDegrees(const char *label, RTVector3& vec)
     return m_string;
 }
 
+const char *RTMath::displayAccelGyro(const char *label, RTVector3& vec)
+{
+    sprintf(m_string, "%s: x:%f, y:%f, z:%f\n", label, vec.x(), vec.y(), vec.z());
+    return m_string;
+}
+
 const char *RTMath::display(const char *label, RTQuaternion& quat)
 {
     sprintf(m_string, "%s: scalar: %f, x:%f, y:%f, z:%f\n", label, quat.scalar(), quat.x(), quat.y(), quat.z());
@@ -627,4 +633,3 @@ RTFLOAT RTMatrix4x4::matMinor(const int row, const int col)
     res -= m_data[rc[0]][cc[2]] * m_data[rc[1]][cc[1]] * m_data[rc[2]][cc[0]];
     return res;
 }
-

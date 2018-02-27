@@ -80,8 +80,8 @@ int main()
 
             if ((now - displayTimer) > 100000) {
                 printf("Sample rate %d: %s\r", sampleRate, RTMath::displayDegrees("", imuData.fusionPose));
-                printf("Sample rate %d: %s\r", sampleRate, RTMath::displayRadians("Accel", imuData.accel));
-                printf("Sample rate %d: %s\r", sampleRate, RTMath::displayRadians("Gyro", imuData.gyro));
+                printf("Sample rate %d: %s\r", sampleRate, RTMath::displayAccelGyro("Accel", imuData.accel));
+                printf("Sample rate %d: %s\r", sampleRate, RTMath::displayAccelGyro("Gyro", imuData.gyro));
                 fflush(stdout);
                 displayTimer = now;
             }
