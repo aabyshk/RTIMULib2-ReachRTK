@@ -58,7 +58,7 @@ const char *RTMath::displayDegrees(const char *label, RTVector3& vec)
 
 const char *RTMath::displayAccelGyro(const char *label, RTVector3& vec)
 {
-    sprintf(m_string, "%s: x:%f, y:%f, z:%f\n", label, vec.x(), vec.y(), vec.z());
+    sprintf(m_string, "%s: x:%f, y:%f, z:%f", label, vec.x(), vec.y(), vec.z());
     return m_string;
 }
 
